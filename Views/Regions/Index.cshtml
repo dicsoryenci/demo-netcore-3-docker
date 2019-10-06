@@ -1,0 +1,41 @@
+@model IEnumerable<webmvc.Regions>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.region_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.region_name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.region_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.region_name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.region_id  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.region_id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.region_id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
