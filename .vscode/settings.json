@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "HumanResources",
+            "dialect": "MSSQL",
+            "name": "DockerDB",
+            "password": "SqLr0ck$!",
+            "port": 1433,
+            "server": "localhost",
+            "username": "SA"
+        }
+    ]
+}

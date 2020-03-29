@@ -10,5 +10,6 @@ namespace webmvc
         }
 
         public DbSet<Regions> Regions { get; set; }
+        public DbSet<Departments> Departments { get; set; }
     }
 }

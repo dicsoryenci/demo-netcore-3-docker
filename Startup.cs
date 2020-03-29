@@ -25,7 +25,7 @@ namespace webmvc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Contexto>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DemoContext2")));
+            options.UseSqlServer(Configuration.GetConnectionString("DemoContext")));
             services.AddControllersWithViews();
         }
 
